@@ -1,10 +1,9 @@
 const express = require('express');
 const { default: mongoose } = require('mongoose');
 const router = express.Router();
-// const ObjectId = require('mongoose').Types.ObjectId;    
-
-// const { User } = require('../models/user');
 const User= mongoose.model('employees');
+const bcrypt = require('bcrypt');
+
 
 
 // Get All Employees
@@ -19,21 +18,6 @@ router.get('/user/getAll', (req, res) => {
         }
     });
 });
-
-
-
-
-// Get Single Employee (First Way)
-
-// router.get('/api/employee/:id', (req, res) => {
-//     Employee.findById(req.params.id, (err, data) => {
-//         if(!err) {
-//             res.send(data);
-//         } else {
-//            console.log(err);
-//         }
-//     });
-// });
 
 
 
@@ -75,47 +59,57 @@ var user = new User();
 
 
 
-// Update Employee
-
-// router.put('/api/employee/update/:id', (req, res) => {
 
 
-//     const emp = {
-//         name: req.body.name,
-//         position: req.body.position,
-//         office: req.body.office,
-//         salary: req.body.salary
-//     };
-//     Employee.findByIdAndUpdate(req.params.id, { $set: emp }, { new: true }, (err, data) => {
-//         if(!err) {
-//             res.status(200).json({code: 200, message: 'Employee Updated Successfully', updateEmployee: data})
-//         } else {
-//             console.log(err);
-//         }
-//     });
-// });
-
-
-
-
-
-// // Delete Employee
-router.delete('/user/delete', (req, res) => {
-
-    if(req.body.email){
-
-    User.findOneAndRemove(req.body.email, (err, data) => {
-        if(!err) {
-            // res.send(data);
-            res.status(200).json({code: 200, message: 'Employee deleted', deleteEmployee: data})
-        } else {
-            console.log(err);
+router.put('/user/edit/:email',async (req, res) => {
+    const email= req.params.email;
+    let nameRegex =  /^[a-zA-Z]+$/;
+    try{
+        await User.findOneAndUpdate({
+            email: email,
+        },
+        {   
+            
+            fullname:req.body.fullname,
+            password:req.body.password,
+            
         }
-    });
-}else{
-    res.status(500).json({code: 200, message: 'Please enter the email'}) 
-}
+        )
+       
+        res.status(202).json({email:email});
+        console.log("Updated");
+    
+
+    } catch (error) {
+        res.status(401).json({message: error.message});
+    }
+    
 });
 
 
+
+
+
+
+
+
+
+router.delete('/user/delete/:email', (req, res) => {
+const filter = { email: req.params.email };
+    User.findOneAndDelete(filter, (err, data) => {
+        if (!err & data != null) {
+            res.status(200).json({ code: 200, message: 'User deleted', deletedUser: data })
+        } else if (data == null) {
+            res.status(404).json({ code: 404, message: 'No User found with this E-mail' });
+        }
+        else if (err) {
+            console.log(err);
+        }
+    });
+});
+
+
+
 module.exports = router;
+
+//zz
