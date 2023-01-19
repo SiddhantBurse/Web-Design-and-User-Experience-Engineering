@@ -1,0 +1,107 @@
+#wrapper { 
+    
+    width: 90%;
+    margin: auto;
+    color: white;
+    font-family: 'Courier New', Courier, monospace; 
+} 
+#wrapper h1, h2 
+{ 
+    color: beige;
+ }
+
+#wrapper h1 { 
+  text-align: center;
+  font-size: 300%;
+padding: 5% 0;
+}
+#wrapper nav {
+  float: left;
+    width: 20%;
+  font-size: 120%;
+
+}	  
+#wrapper nav ul 
+{ list-style-type: none; }
+#wrapper nav a 
+{ text-decoration: none;}
+#wrapper nav a:link 
+{ color: beige; }
+#wrapper nav a:hover 
+{ color: aqua; }
+
+
+#wrapper aside 
+{ float: right; 
+width: 25%;
+padding: 0 2.5%;
+}
+#wrapper main
+ { width: 50%;
+   padding-right: 2%;
+   margin-left: 20%;
+}
+#wrapper footer 
+{ text-align: center;
+ font-size: 10px;
+ font-style: italic;
+ color:beige;
+ padding: 2.5%;
+ clear: both; 
+}
+
+@media only screen and (max-width: 768px) {
+  #wrapper nav 
+  { float: none;
+        width: auto;
+        margin-top: 0;	
+        text-align: center;	  
+      }
+
+      #wrapper  main { width: 60%;
+             margin-left: 5%; }
+             #wrapper aside { width: 30%;  
+    }
+    #wrapper nav ul 
+   { padding-left: 0;
+        }
+        #wrapper nav li
+  { display: inline;
+ margin: 0 2%; 
+ }
+
+}
+@media only screen and (max-width: 768px) {
+  #wrapper nav { float: none;
+        width: auto;
+        margin-top: 0;	
+        text-align: center;	  }
+        #wrapper main { width: 60%;
+             margin-left: 5%; }
+             #wrapper aside { width: 30%;  
+    }
+    #wrapper nav ul { padding-left: 0;
+        }
+        #wrapper nav li { display: inline;
+ margin: 0 2%; 
+}
+
+}
+@media only screen and (max-width: 350px) {
+    #wrapper { width: auto; }
+    #wrapper h1 { margin-bottom: 0; }
+    #wrapper main { margin: 0 5%;      
+               width: auto;	}
+               #wrappernav { width: auto;	  }
+               #wrappernav ul { padding-left: 0; 
+       text-align: center;}
+       #wrapper nav li {display: inline-block;
+      width: 5em;
+      font-size: 120%;
+  text-align: center;
+  
+  margin: 1%;
+  padding: 2.5%; }
+  #wrapperaside { display: none; }		
+}
+#wrapper header, main, nav, footer, figure, figcaption { display: block; }

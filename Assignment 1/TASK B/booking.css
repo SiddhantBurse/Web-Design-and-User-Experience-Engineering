@@ -1,0 +1,51 @@
+body{
+    background-color:bisque ;
+}
+
+
+header h1{
+    color: #F71726;
+     text-align: center;
+    }
+
+header img 
+{display: block;
+        margin-left: auto; 
+        margin-right: auto; 
+        width: 15%;
+        height: 15%}
+
+a:link 
+{color: green;
+    font-size: 1.3em;}
+
+nav a
+{color:green;
+  
+  font-size: 1.3em;}
+
+nav 
+{float:right;}
+
+
+#travel {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  #travel td, #travel th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  #travel th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: rgb(190, 213, 214);
+    color: white;
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
+

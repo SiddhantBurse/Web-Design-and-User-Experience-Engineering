@@ -1,0 +1,71 @@
+
+@import './Review';
+@import './Timeout';
+@import './footer';
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica;
+  }
+
+
+  nav {
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+  
+    li {
+      list-style: none;
+      display: inline-block;
+      padding: 0 20px;
+    }
+  
+    a {
+      text-decoration: none;
+      color: #555;
+      transition: all 0.3s ease 0s;
+    }
+  }
+
+
+  
+  /* Header */
+  header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px 50px;
+    box-shadow: 0 1px 8px #ddd;
+  }
+  
+  #nav-title {
+    margin-right: auto;
+    font-size: 1.5em;
+  }
+  
+
+  
+  header a:hover {
+    color: #b2dfdb;
+  }
+
+ main h1{
+  text-align: center;
+  padding-top: 2% ;
+ }
+
+
+ 
+
+
+
+
+
+
+
+
+/*# sourceMappingURL=Style1.css.map */

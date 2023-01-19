@@ -1,0 +1,36 @@
+footer {
+  position: relative;
+  background-color: white;
+  width: 100vw;
+  height: 200px;
+  z-index: 10;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.footerContent {
+  display: flex;
+  opacity: 0;
+  transform: translateY(-100px);
+}
+
+.footerContent div {
+  width: 50%;
+  margin: 0 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footerContent h3 {
+  margin: 0 0 10px 0;
+}
+
+.footerContent p, .footerContent a {
+  margin: 0;
+}
+
+.footerContent a {
+  text-decoration: none;
+  color: gray;
+}/*# sourceMappingURL=footer.css.map */

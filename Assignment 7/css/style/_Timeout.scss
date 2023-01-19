@@ -1,0 +1,48 @@
+$lg: 30px;
+
+@function double($size){
+    @return $size*2 ;
+}
+
+@mixin five {
+
+    margin-top: 3%;
+    display: grid;
+    height: 500px;
+    margin-left: 5%;
+    margin-right: 5%;
+    border: 2px ;
+    padding: 10px;
+    border-radius: 50px 20px;
+    
+  }
+  @mixin image {
+
+    padding-top: 12% ;
+    padding-left: 5%;
+    
+  }
+
+
+
+.fivestar {
+   @include five;
+   grid-template-columns: repeat(3, 1fr);
+   grid-auto-rows: 200px;
+   background-color: #c6ebea;
+  }
+  .fivestar img{
+    @include image;
+    border-radius: 50%;
+    
+  }
+  .timeout{
+    text-align: center;
+    padding-top: 2%;
+    font-size: double($lg);
+  }
+  .one{
+    padding: 30px;
+    text-align: justify;
+  }
+

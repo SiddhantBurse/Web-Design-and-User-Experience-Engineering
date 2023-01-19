@@ -1,0 +1,41 @@
+ $s:footerContent;
+footer {
+  position: relative;
+  background-color: gainsboro;
+  width: 100vw;
+  height: 200px;
+  z-index: 10;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  margin-top: 5%;
+
+.#{$s} {
+  display: flex;
+}
+.#{$s} div {
+  width: 50%;
+  margin: 0 50px;
+  display: flex;
+  flex-direction: column;
+}
+}
+
+.#{$s} h3 {
+  margin: 0 0 10px 0;
+}
+
+.#{$s} p, .#{$s} a {
+  margin: 0;
+}
+
+.#{$s} a {
+  text-decoration: none;
+  color: gray;
+}
+
+
+
+
+
+

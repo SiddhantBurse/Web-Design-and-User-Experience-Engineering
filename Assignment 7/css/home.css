@@ -1,0 +1,10 @@
+footer {
+  margin-top: auto;
+}
+
+footer {
+  display: grid;
+  place-items: center;
+  background-color: rebeccapurple;
+  color: #fff;
+}/*# sourceMappingURL=home.css.map */

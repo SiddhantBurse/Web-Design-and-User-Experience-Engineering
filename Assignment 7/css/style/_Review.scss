@@ -1,0 +1,38 @@
+
+
+%toolbelt {
+    float: left;
+    width: 30%;
+    display: grid;
+    margin-top: 5%;
+    
+  }
+
+  %toolbelt1{
+    display: grid;
+    clear: both;
+  }
+  .column {
+    margin-left: 10%;
+    @extend %toolbelt;
+    padding: 30px;
+  }
+  
+
+  .row:after {
+    content: "";
+    @extend %toolbelt1;
+  }
+  
+
+  @media screen and (max-width: 900px) {
+    .column {
+      width: 50%;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }/*# sourceMappingURL=Style1.css.map */

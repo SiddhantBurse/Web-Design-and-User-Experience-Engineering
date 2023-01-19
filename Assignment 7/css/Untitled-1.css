@@ -1,0 +1,146 @@
+
+
+header li {
+  list-style: none;
+  display: inline-block;
+  padding: 0 20px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px 50px;
+  box-shadow: 0 1px 8px #ddd;
+}
+
+#nav-title {
+  margin-right: auto;
+  font-size: 1.5em;
+}
+
+header li {
+  list-style: none;
+  display: inline-block;
+  padding: 0 20px;
+}
+
+header a {
+  text-decoration: none;
+  color: #555;
+  transition: all 0.3s ease 0s;
+}
+
+header a:hover {
+  color: #b2dfdb;
+}
+
+
+/* card*/
+.card-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.card{
+  width: 250px;
+  height: auto;
+  position: relative;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  padding: 20px;
+  transition: all .3s ease-in;
+}
+.card > *{
+  padding: 10px;
+}
+.card .card-image{
+  height: 150px;
+  width: 150px;
+  border: 5px double #022a3c;
+  border-radius: 50%;
+  background-position: center center;
+  background-size: cover;    
+}
+.card .card-title{
+  padding: 20px 10px;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-shadow: 1px 0px 2px #262654;
+}
+.card:nth-child(1) .card-image{
+  background-image: url(BlueMoon.jpg);
+}
+.card:nth-child(2) .card-image{
+  background-image: url(BrowniSunday.jpg);
+}
+.card:nth-child(3) .card-image{
+  background-image: url(friedicecream.jpg);
+}
+.card:hover{
+  background: #e84393;
+  color: #fff;
+  box-shadow: 0px 0px 11px 5px #000000;
+
+}
+
+.card .card-text{
+  line-height: 20px;
+  font-size: 400;
+}
+
+
+/* Grid two row*/
+
+.row{
+  width: 80%;
+  max-width: 1170px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap:50px 130px;
+  margin-left: 10%;
+  
+
+}
+.row .left img{
+  width:100%;
+  height:80%;
+  object-fit: cover;
+  padding-top: 30px;
+  border-radius: 80%;
+
+}
+.row .right{
+  display:flex;
+  align-items: center;
+
+}
+.row .right .content{
+  padding-left: 30px;
+}
+.row .right .content p{
+ font-size: 16px;
+ line-height: 26px;
+ padding-bottom: 15px;
+ color: #b3e6ff;
+ text-align: justify;
+}
+.row .right .content h1{
+ 
+  color: #80b3ff;
+ }
